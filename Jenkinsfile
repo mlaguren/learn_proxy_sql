@@ -5,13 +5,13 @@ pipeline {
         stage('Test Docker Image(s)') {
             steps {
                 sh 'bundle install --path vendor/bundle'
-                sh 'bundle exec rspec spec/images -r rspec_junit_formatter --format RspecJunitFormatter -o junit.xml'
+                sh 'bundle exec rspec spec/images -r rspec_junit_formatter --format RspecJunitFormatter -o docker_images.xml'
             }
             post {
                 always {
-                    junit 'junit.xml'
+                    junit 'docker_images.xml'
                     }
-                    }
+                }
         }
     }
 }
