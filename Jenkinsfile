@@ -5,7 +5,7 @@ pipeline {
         stage('Test Docker Image(s)') {
             steps {
                 sh 'bundle install --path vendor/bundle'
-                sh 'bundle exec rspec spec/dockerfiles'
+                sh 'bundle exec rspec spec/images'
             }
         }
     }

@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe "MySQL Production Database Is Set Up Correctly" do
   before(:all) do
-    image = Docker::Image.build_from_dir('./production-mysql/.')
+    image = Docker::Image.build_from_dir('production-mysql/.')
 
     set :backend, :docker
     set :docker_image, image.id
