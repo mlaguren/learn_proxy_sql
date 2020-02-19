@@ -1,1 +1,1 @@
-# learn_proxy_sql
+# Learn Proxy SQL
